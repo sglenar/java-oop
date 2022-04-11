@@ -1,7 +1,7 @@
 package com.epam.rd.at.java_oop.electricalappliances;
 
 public class SomeWiredAppliance extends SomeAppliance implements WiredAppliances{
-    boolean isPluggedIn;
+    private boolean isPluggedIn;
 
     //constructors
     public SomeWiredAppliance() {
@@ -11,6 +11,7 @@ public class SomeWiredAppliance extends SomeAppliance implements WiredAppliances
 
 
     public SomeWiredAppliance(boolean isPluggedIn) {
+        super();
         this.isPluggedIn = isPluggedIn;
     }
 
@@ -28,5 +29,9 @@ public class SomeWiredAppliance extends SomeAppliance implements WiredAppliances
     @Override
     public void plugOut() {
         this.isPluggedIn = false;
+    }
+
+    public boolean getIsPluggedIn() {
+        return isPluggedIn;
     }
 }

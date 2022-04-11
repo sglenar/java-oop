@@ -23,6 +23,8 @@ public class Iron extends SomeWiredAppliance implements WiredAppliances {
         this.baseType = baseType;
     }
 
+
+
     @Override
     public void plugIn() {
         super.plugIn();
@@ -35,7 +37,7 @@ public class Iron extends SomeWiredAppliance implements WiredAppliances {
 
     @Override
     public void doMainFunctionality() {
-        if (this.isPluggedIn ) {
+        if (this.getIsPluggedIn() ) {
             System.out.println("Ironing...");
             //System.out.println("My main functionality is iron and my main characteristic is Steam power which is equal to " + steamPower+ ", and Base typa which is equal to "+ baseType);
         } else {
