@@ -1,47 +1,63 @@
 package com.epam.rd.at.java_oop.electricalappliances;
 
-public class Iron extends SomeWiredAppliance implements WiredAppliances {
-    private final int steamPower;
-    private final String baseType;
+public class Iron extends SomeAppliance implements ElectricalAppliances {
+    private final int steamPower; // using final to be sure that this parameter will be unchangeable
+    private BaseType baseType;
 
+    //creating constructors
     public Iron() {
         super();
         this.steamPower = 0;
-        this. baseType = "Cermet";
+        this.baseType = BaseType.CERMET;
     }
 
-
-    public Iron(int steamPower, String baseType) {
+    public Iron(int steamPower, BaseType baseType) {
         super();
+        this.steamPower = steamPower ;
+        this.baseType = baseType;
+
+    }
+
+    public Iron(String modelName, ApplianceType applianceType, int powerConsumptionInWT, int priceInUS, int steamPower, BaseType baseType) {
+        super(modelName, applianceType, powerConsumptionInWT, priceInUS);
         this.steamPower = steamPower;
         this.baseType = baseType;
     }
 
-    public Iron(String modelName, String applianceType, int powerConsumptionInWT, int priceInUS, boolean isWired, boolean isPluggedIn, int steamPower, String baseType) {
-        super(modelName, applianceType, powerConsumptionInWT, priceInUS, isWired, isPluggedIn);
-        this.steamPower = steamPower;
+    //methods
+    public int getSteamPower() {
+        return this.steamPower;
+    }
+
+    public void setBaseType(BaseType baseType) {
         this.baseType = baseType;
     }
 
-    @Override
-    public void plugIn() {
-        super.plugIn();
-    }
-
-    @Override
-    public void plugOut() {
-        super.plugOut();
+    public BaseType getBaseType() {
+        return this.baseType;
     }
 
     @Override
     public void doMainFunctionality() {
-        if (this.isPluggedIn ) {
+        if (this.getIsPluggedIn()) {
             System.out.println("Ironing...");
-            //System.out.println("My main functionality is iron and my main characteristic is Steam power which is equal to " + steamPower+ ", and Base typa which is equal to "+ baseType);
         } else {
             System.out.println("Can't do my functionality now. Please plug me in");
         }
     }
+}
+enum BaseType {
+    CERMET("Cermet"),
+    TEFLON("Teflon"),
+    STEEL("Steel");
 
+    private String title;
 
+    BaseType(String title) {
+        this.title = title;
+    }
+
+    public String getTitle() {
+        return title;
+    }
 }
