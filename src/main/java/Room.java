@@ -67,7 +67,7 @@ public class Room {
                     + element.getPriceInUS());
             System.out.println("========================");
         }
-        //
+        //printing first appliance in room in described power consumption range
         for  (SomeAppliance element: roomWithAppliances) {
             if (element.isDeviceInPowerConsumptionRange(rangeStart, rangeEnd)) {
                 System.out.println("The device in Power consumption range [" + rangeStart + " , " + rangeEnd + "] is "
