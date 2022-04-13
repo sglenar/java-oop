@@ -10,7 +10,6 @@ public enum ApplianceType {
     ApplianceType(String title) {
         this.title = title;
     }
-
     public String getTitle() {
         return title;
     }

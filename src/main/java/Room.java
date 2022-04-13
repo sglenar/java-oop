@@ -4,9 +4,12 @@ import com.epam.rd.at.java_oop.electricalappliances.enums.BaseType;
 import com.epam.rd.at.java_oop.electricalappliances.enums.LoadType;
 
 import java.util.Arrays;
+import java.util.Comparator;
 
 public class Room {
     public static void main(String[] args) {
+        int rangeStart = 31;
+        int rangeEnd = 40;
         SomeAppliance[] roomWithAppliances = new SomeAppliance[10];
         System.out.println("Scanning all registered devices...");
         System.out.println("Initialization...");
@@ -54,6 +57,24 @@ public class Room {
             System.out.println(element.toString());
             System.out.println("========================");
         }
-        //Arrays.sort(roomWithAppliances, compare());
+        //Arrays.sort(roomWithAppliances, Comparator.comparingInt(SomeAppliance::getPriceInUS));
+        //sorting by PRICE
+        System.out.println("\n\nSorting appliances by their price");
+        Arrays.sort(roomWithAppliances, new PriceComparator());
+        //printing updated array
+        for  (SomeAppliance element: roomWithAppliances) {
+            System.out.println("Device name: " + element.getModelName() + "\n" + "Device price: "
+                    + element.getPriceInUS());
+            System.out.println("========================");
+        }
+        //
+        for  (SomeAppliance element: roomWithAppliances) {
+            if (element.isDeviceInPowerConsumptionRange(rangeStart, rangeEnd)) {
+                System.out.println("The device in Power consumption range [" + rangeStart + " , " + rangeEnd + "] is "
+                        + element.getModelName() + " with Power consumption = " + element.getPowerConsumptionInWT() );
+                break;
+            }
+        }
+
     }
 }

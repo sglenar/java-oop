@@ -110,4 +110,10 @@ public class SomeAppliance implements ElectricalAppliances {
         return this.priceInUS == appliance.priceInUS;
     }
 
+    @Override
+    public boolean isDeviceInPowerConsumptionRange(int rangeStart, int rangeEnd) {
+        return this.powerConsumptionInWT >= rangeStart && this.powerConsumptionInWT <= rangeEnd;
+    }
+
+
 }
