@@ -43,16 +43,6 @@ public class Iron extends SomeAppliance implements ElectricalAppliances {
     }
 
     @Override
-    public void doMainFunctionality() {
-        if (this.getIsPluggedIn()) {
-            System.out.println("I am the " + this.getModelName()) ;
-            System.out.println("Ironing...");
-        } else {
-            System.out.println("Can't do my functionality now. Please plug me in");
-        }
-    }
-
-    @Override
     public String toString() {
         return super.toString() + "My base type is " + this.baseType.getTitle() + "\n" +
                 "My steam power is " + this.steamPower + "\n";

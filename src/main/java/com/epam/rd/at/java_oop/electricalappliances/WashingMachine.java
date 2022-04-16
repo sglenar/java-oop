@@ -36,16 +36,6 @@ public class WashingMachine extends SomeAppliance implements  ElectricalApplianc
     }
 
     @Override
-    public void doMainFunctionality() {
-        if (this.getIsPluggedIn()) {
-            System.out.println("I am the " + this.getModelName()) ;
-            System.out.println("Washing clothes...");
-        } else {
-            System.out.println("Can't do my functionality now. Please plug me in");
-        }
-    }
-
-    @Override
     public String toString() {
         return super.toString() + "My load type is " + this.loadType.getTitle() + "\n";
     }

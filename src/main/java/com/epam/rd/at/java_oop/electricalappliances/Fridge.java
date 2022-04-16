@@ -38,16 +38,6 @@ public class Fridge extends  SomeAppliance implements ElectricalAppliances {
         this.numberOfCases = numberOfCases;
     }
 
-    @Override
-    public void doMainFunctionality() {
-        if (this.getIsPluggedIn()) {
-            System.out.println("I am the " + this.getModelName()) ;
-            System.out.println("Cooling...");
-        } else {
-            System.out.println("Can't do my functionality now. Please plug me in");
-        }
-    }
-
     public String toString() {
         return super.toString() + "I have " + this.numberOfCases + " cases" + "\n";
     }
