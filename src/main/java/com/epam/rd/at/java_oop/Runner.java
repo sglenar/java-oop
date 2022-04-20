@@ -7,7 +7,7 @@ import com.epam.rd.at.java_oop.electricalappliances.enums.LoadType;
 
 public class Runner {
     public static void main(String[] args) {
-        Room myRoom = new Room(new SomeAppliance());
+        Room myRoom = new Room();
         myRoom.addAppliance(new SomeAppliance("Test Appliance", ApplianceType.WIRED ,
                 20, 200, true));
         myRoom.addAppliance(new Tv(-5));
