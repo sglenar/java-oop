@@ -4,7 +4,7 @@ import com.epam.rd.at.java_oop.electricalappliances.enums.ApplianceType;
 
 public class SomeAppliance implements ElectricalAppliances {
     private String modelName;
-    private ApplianceType applianceType;
+    private final ApplianceType applianceType;
     private int powerConsumptionInWT;
     private int priceInUS;
     boolean isPluggedIn;
@@ -54,13 +54,6 @@ public class SomeAppliance implements ElectricalAppliances {
         this.modelName = modelName;
     }
 
-    public ApplianceType getApplianceType() {
-        return applianceType;
-    }
-    public void setApplianceType(ApplianceType applianceType) {
-        this.applianceType = applianceType;
-    }
-
     public int getPowerConsumptionInWT() {
         return powerConsumptionInWT;
     }
@@ -69,24 +62,10 @@ public class SomeAppliance implements ElectricalAppliances {
     }
 
     //methods
-    @Override
-    public boolean compareAppliancesByPrice(ElectricalAppliances device) {
-        return this.getPriceInUS() > device.getPriceInUS();
-    }
 
-
-    @Override
-    public void doMainFunctionality() {
-        System.out.println("I am the " + this.getModelName()) ;
-        System.out.println("My main functionality is unknown");
-    }
-
-    @Override
     public void plugIn() {
         this.isPluggedIn = true;
     }
-
-    @Override
     public void plugOut() {
         this.isPluggedIn = false;
     }
@@ -105,12 +84,6 @@ public class SomeAppliance implements ElectricalAppliances {
                 "My connection status is " + isPluggedIn + "\n";
     }
 
-    @Override
-    public boolean equals(SomeAppliance appliance) {
-        return this.priceInUS == appliance.priceInUS;
-    }
-
-    @Override
     public boolean isDeviceInPowerConsumptionRange(int rangeStart, int rangeEnd) {
         return this.powerConsumptionInWT >= rangeStart && this.powerConsumptionInWT <= rangeEnd;
     }
