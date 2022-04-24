@@ -6,10 +6,10 @@ import java.util.Arrays;
 
 public class Room  {
 
-   private SomeAppliance[] roomWithAppliance = new SomeAppliance[1];
+   private SomeAppliance[] roomWithAppliance;
 
     public Room() {
-        this.roomWithAppliance[0] = new SomeAppliance();
+        this.roomWithAppliance = new SomeAppliance[0];
     }
 
     public void addAppliance(SomeAppliance appliance) {

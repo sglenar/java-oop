@@ -1,5 +1,6 @@
 package com.epam.rd.at.java_data_handling.exercises;
 
+import com.epam.rd.at.data_handling.RegexDataHandling;
 import org.junit.jupiter.api.Test;
 
 import static org.junit.jupiter.api.Assertions.assertArrayEquals;

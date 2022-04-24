@@ -1,5 +1,6 @@
 package com.epam.rd.at.java_data_handling.exercises;
 
+import com.epam.rd.at.data_handling.StringDataHandling;
 import com.epam.rd.at.java_data_handling.utils.OutputHelper;
 import org.junit.jupiter.api.Test;
 

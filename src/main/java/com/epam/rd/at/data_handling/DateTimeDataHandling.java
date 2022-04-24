@@ -1,4 +1,4 @@
-package com.epam.rd.at.java_data_handling.exercises;
+package com.epam.rd.at.data_handling;
 
 import java.time.DayOfWeek;
 import java.time.LocalDate;
