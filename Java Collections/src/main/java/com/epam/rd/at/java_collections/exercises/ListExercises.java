@@ -1,44 +1,84 @@
 package com.epam.rd.at.java_collections.exercises;
 
 import java.time.LocalDate;
-import java.util.Collection;
-import java.util.List;
+import java.util.*;
 
 public class ListExercises {
 
     // task 1
     public static List<Integer> generateNumbers(int x) {
-        throw new UnsupportedOperationException("Not yet implemented");
+        List<Integer> result = new ArrayList<>();
+        for (int i = 1; i < x+1; i++) {
+            result.add(i);
+        }
+        return result;
     }
 
     // task 2
     public static LocalDate findMinDate(Collection<LocalDate> collection) {
-        throw new UnsupportedOperationException("Not yet implemented");
+        return Collections.min(collection);
     }
 
     // task 3
     public static <T> List<T> getOddElements(List<T> list) {
-        throw new UnsupportedOperationException("Not yet implemented");
+        List<T> result = new ArrayList<>();
+        for (int i = 1; i < list.size();) {
+            result.add(list.get(i));
+            i += 2;
+        }
+        return result;
     }
 
     // task 4
     public static List<String> getOnlyNumbers(List<String> list) {
-        throw new UnsupportedOperationException("Not yet implemented");
+        List<String> result = new ArrayList<>();
+        for (String s : list) {
+            if (isInteger(s)) {
+                result.add(s);
+            }
+        }
+        return result;
     }
 
+    public static boolean isInteger(String s) {
+        try {
+            Integer.parseInt(s);
+        } catch(NumberFormatException | NullPointerException e) {
+            return false;
+        }
+        return true;
+    }
     // task 5
     public static boolean checkNoNegativeValues(List<Integer> list) {
-        throw new UnsupportedOperationException("Not yet implemented");
+        for (Integer integer : list) {
+            if (integer < 0) {
+                return false;
+            }
+        }
+        return true;
     }
 
     // task 6
     public static void sortByLengthDesc(List<String> list) {
-        throw new UnsupportedOperationException("Not yet implemented");
+        LengthComparator comparator = new LengthComparator();
+        list.sort(comparator);
     }
+    
 
     // task 7
     public static boolean isSortedAlphabeticallyIgnoringCase(List<String> list) {
-        throw new UnsupportedOperationException("Not yet implemented");
+        boolean result = true;
+        List<String> isLoweredList = new ArrayList<>();
+        for (String s : list) {
+            isLoweredList.add(s.toLowerCase());
+        }
+        for (int i = 1; i < list.size(); i++) {
+            if (isLoweredList.get(i-1).compareTo(isLoweredList.get(i)) > 0) {
+                result = false;
+                break;
+            }
+        }
+        return result;
     }
 
     // task 8
