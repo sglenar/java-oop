@@ -35,7 +35,7 @@ public class DynamicArrayTest {
 
     @Test
     void setElement() {
-        DynamicArray<Integer> array = new DynamicArray<>(10);
+        DynamicArray<Integer> array = new DynamicArray<>();
         array.addElement(1);
         array.addElement(2);
         array.setElement(3, 1);

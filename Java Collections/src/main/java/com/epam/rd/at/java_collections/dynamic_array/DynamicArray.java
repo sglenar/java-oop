@@ -5,10 +5,10 @@ import java.util.Arrays;
 public class DynamicArray<T> {
     T[] array;
  //сколько реально элементов лежит в массиве
-    //int arrayCapacity = 0; //какая общая размерность массива
+
 
     public DynamicArray() {
-        this.array = (T[])new Object[10];
+        this.array = (T[])new Object[0];
         //arrayCapacity = 10;
     }
 
