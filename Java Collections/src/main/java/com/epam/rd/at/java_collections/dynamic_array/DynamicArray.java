@@ -1,50 +1,101 @@
 package com.epam.rd.at.java_collections.dynamic_array;
 
+import java.util.Arrays;
+
 public class DynamicArray<T> {
+    T[] array;
+ //сколько реально элементов лежит в массиве
+    //int arrayCapacity = 0; //какая общая размерность массива
 
     public DynamicArray() {
-        throw new UnsupportedOperationException("Not yet implemented");
+        this.array = (T[])new Object[10];
+        //arrayCapacity = 10;
     }
 
     public DynamicArray(int length) {
-        throw new UnsupportedOperationException("Not yet implemented");
+        this.array = (T[])new Object[length];
+
     }
 
     @SafeVarargs
     public DynamicArray(T... elements) {
-        throw new UnsupportedOperationException("Not yet implemented");
+        this.array = (T[])new Object[elements.length];
+        if (this.getSize() >= 0) System.arraycopy(elements, 0, this.array, 0, this.getSize());
     }
 
     public void addElement(T element) {
-        throw new UnsupportedOperationException("Not yet implemented");
+        this.increaseSize();
+        this.array[this.getSize()-1] = element;
     }
 
     public void addElement(T element, int index) {
-        throw new UnsupportedOperationException("Not yet implemented");
+        int iterator = 0;
+        T[] result = (T[])new Object[this.getSize()+1];
+        if (index > this.getSize()) {
+            throw new IllegalArgumentException("Incorrect index: " + index);
+        }
+        while (iterator != index) {
+            result[iterator] = this.array[iterator];
+            iterator++;
+        }
+        result[index] = element;
+        if (result.length - (index + 1) >= 0)
+            System.arraycopy(this.array, index + 1 - 1, result, index + 1, result.length - (index + 1));
+        this.array = result;
+
     }
 
     public void setElement(T element, int index) {
-        throw new UnsupportedOperationException("Not yet implemented");
+        for (int i = 0; i < this.getSize(); i++) {
+            if (i == index) {
+                this.array[i] = element;
+            }
+        }
     }
 
     public T getElement(int index) {
-        throw new UnsupportedOperationException("Not yet implemented");
+        T result = null;
+        for (int i = 0; i < this.getSize(); i++) {
+            if (i == index) {
+                result = this.array[i];
+            }
+        }
+        return result;
     }
 
     public void removeElement(int index) {
-        throw new UnsupportedOperationException("Not yet implemented");
+        T[] result = (T[])new Object[this.getSize()-1];
+        if (index >= 0) System.arraycopy(this.array, 0, result, 0, index);
+        if (result.length - index >= 0) System.arraycopy(this.array, index + 1, result, index, result.length - index);
+        this.array = result;
+
     }
 
     public boolean containsElement(T element) {
-        throw new UnsupportedOperationException("Not yet implemented");
+        for (int i = 0; i < this.getSize(); i++) {
+            if (this.array[i].equals(element)) {
+                return true;
+            }
+        }
+        return false;
     }
 
     public int getSize() {
-        throw new UnsupportedOperationException("Not yet implemented");
+        return this.array.length;
+    }
+
+    public void increaseSize() {
+        this.array = Arrays.copyOf(this.array, this.getSize()+1);
     }
 
     public String toString() {
-        throw new UnsupportedOperationException("Not yet implemented");
+        StringBuilder result;
+        result = new StringBuilder("[");
+        for (int i = 0; i < this.getSize()-1; i++) {
+            result.append(this.array[i]).append(", ");
+        }
+        result.append(this.array[getSize() - 1]).append("]");
+        return result.toString();
     }
 
 }
