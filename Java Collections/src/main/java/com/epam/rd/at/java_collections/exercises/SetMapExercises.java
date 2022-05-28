@@ -18,8 +18,6 @@ public class SetMapExercises {
     // task 2
     public static List<LocalDate> getRandomUniqueDates(int year, int limit) {
         SortedSet<LocalDate> set = new TreeSet<>();
-        LocalDate start = LocalDate.of(year, Month.JANUARY, 1);
-        LocalDate end = LocalDate.of(year, Month.DECEMBER, 31);
         for (int i = 0; i < limit; i++) {
             set.add(createRandomDate(year, year));
         }
@@ -64,14 +62,9 @@ public class SetMapExercises {
     public static <K> Map<K, Integer> countDuplicates(List<K> list) {
         Map<K, Integer> result = new HashMap<>();
         for (K k : list) {
-            int counter = 0;
-            for (K k1 : list) {
-                if (k.equals(k1)) {
-                    counter += 1;
-                }
-                if (counter > 1) {
-                    result.put(k, counter);
-                }
+            int freq = Collections.frequency(list,k);
+            if (freq > 1) {
+                result.put(k, freq);
             }
         }
         return result;

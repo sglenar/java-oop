@@ -122,7 +122,7 @@ public class DynamicArrayTest {
         DynamicArray<Integer> array2 = new DynamicArray<>(5);
         array2.addElement(1);
         array2.addElement(2);
-        DynamicArray<Integer> array3 = new DynamicArray<>(1, 2);
+        DynamicArray<Integer> array3 = new DynamicArray<>(5, 1, 2);
         assertEquals(array1, array2);
         assertEquals(array2, array3);
         assertEquals(array1, array3);

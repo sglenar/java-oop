@@ -9,13 +9,11 @@ public class DynamicArray<T> {
 
     public DynamicArray() {
         this.array = (T[])new Object[0];
-        //arrayCapacity = 10;
     }
 
-    public DynamicArray(int length) {
+    /*public DynamicArray(int length) {
         this.array = (T[])new Object[length];
-
-    }
+    }*/
 
     @SafeVarargs
     public DynamicArray(T... elements) {
@@ -46,6 +44,9 @@ public class DynamicArray<T> {
     }
 
     public void setElement(T element, int index) {
+        if (index > this.getSize()) {
+            throw new IllegalArgumentException("Incorrect index: " + index);
+        }
         for (int i = 0; i < this.getSize(); i++) {
             if (i == index) {
                 this.array[i] = element;
@@ -54,6 +55,9 @@ public class DynamicArray<T> {
     }
 
     public T getElement(int index) {
+        if (index > this.getSize()) {
+            throw new IllegalArgumentException("Incorrect index: " + index);
+        }
         T result = null;
         for (int i = 0; i < this.getSize(); i++) {
             if (i == index) {
@@ -98,4 +102,22 @@ public class DynamicArray<T> {
         return result.toString();
     }
 
+    @Override
+    public boolean equals(Object o) {
+        DynamicArray<?> array1 = (DynamicArray<?>) o;
+        if (this.getSize() != array1.getSize()) {
+            return false;
+        } else {
+            for (int i = 0; i < this.getSize() ; i++) {
+                if (this.array[i] != array1.array[i]) {
+                    return false;
+                }
+            }
+        } return true;
+    }
+
+    @Override
+    public int hashCode() {
+        return 0;
+    }
 }
