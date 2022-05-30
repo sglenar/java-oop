@@ -1,0 +1,224 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="AutoImportSettings">
+    <option name="autoReloadType" value="SELECTIVE" />
+  </component>
+  <component name="ChangeListManager">
+    <list default="true" id="93e266a1-443d-47d8-ae99-f5ea4a2a15cc" name="Changes" comment="Complete DataHandling homework" />
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="Interface" />
+        <option value="Class" />
+      </list>
+    </option>
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="MarkdownSettingsMigration">
+    <option name="stateVersion" value="1" />
+  </component>
+  <component name="ProjectId" id="27bFxIS8Gygl8f1BqZOAI29GUE8" />
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent">
+    <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
+    <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
+    <property name="last_directory_selection" value="$PROJECT_DIR$/src/main/test" />
+  </component>
+  <component name="RecentsManager">
+    <key name="ExtractSuperBase.RECENT_KEYS">
+      <recent name="com.epam.rd.at.java_oop.electricalappliances" />
+    </key>
+    <key name="MoveClassesOrPackagesDialog.RECENTS_KEY">
+      <recent name="com.epam.rd.at.java_oop" />
+    </key>
+  </component>
+  <component name="RunManager" selected="JUnit.DateTimeDataHandlingTest">
+    <configuration name="Room" type="Application" factoryName="Application" nameIsGenerated="true">
+      <option name="ALTERNATIVE_JRE_PATH" value="11" />
+      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="true" />
+      <option name="MAIN_CLASS_NAME" value="com.epam.rd.at.java_oop.Room" />
+      <module name="java-oop" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="DateTimeDataHandlingTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="java-oop" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.epam.rd.at.java_data_handling.exercises.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="com.epam.rd.at.java_data_handling.exercises" />
+      <option name="MAIN_CLASS_NAME" value="com.epam.rd.at.java_data_handling.exercises.DateTimeDataHandlingTest" />
+      <option name="TEST_OBJECT" value="class" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="DateTimeDataHandlingTest.getWeekRange" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="java-oop" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.epam.rd.at.java_data_handling.exercises.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="com.epam.rd.at.java_data_handling.exercises" />
+      <option name="MAIN_CLASS_NAME" value="com.epam.rd.at.java_data_handling.exercises.DateTimeDataHandlingTest" />
+      <option name="METHOD_NAME" value="getWeekRange" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="DateTimeDataHandlingTest.withDayOfWeek" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="java-oop" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.epam.rd.at.java_data_handling.exercises.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="com.epam.rd.at.java_data_handling.exercises" />
+      <option name="MAIN_CLASS_NAME" value="com.epam.rd.at.java_data_handling.exercises.DateTimeDataHandlingTest" />
+      <option name="METHOD_NAME" value="withDayOfWeek" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="RegexDataHandlingTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="java-oop" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.epam.rd.at.java_data_handling.exercises.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="com.epam.rd.at.java_data_handling.exercises" />
+      <option name="MAIN_CLASS_NAME" value="com.epam.rd.at.java_data_handling.exercises.RegexDataHandlingTest" />
+      <option name="TEST_OBJECT" value="class" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="StringDataHandlingTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="java-oop" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.epam.rd.at.java_data_handling.exercises.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="com.epam.rd.at.java_data_handling.exercises" />
+      <option name="MAIN_CLASS_NAME" value="com.epam.rd.at.java_data_handling.exercises.StringDataHandlingTest" />
+      <option name="TEST_OBJECT" value="class" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <recent_temporary>
+      <list>
+        <item itemvalue="JUnit.DateTimeDataHandlingTest" />
+        <item itemvalue="JUnit.RegexDataHandlingTest" />
+        <item itemvalue="JUnit.StringDataHandlingTest" />
+        <item itemvalue="JUnit.DateTimeDataHandlingTest.getWeekRange" />
+        <item itemvalue="JUnit.DateTimeDataHandlingTest.withDayOfWeek" />
+      </list>
+    </recent_temporary>
+  </component>
+  <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="93e266a1-443d-47d8-ae99-f5ea4a2a15cc" name="Changes" comment="" />
+      <created>1649581123825</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1649581123825</updated>
+    </task>
+    <task id="LOCAL-00001" summary="1st commit. Add all 3 interfaces and 3 classes: SomeAppliance, SomeWiredAppliance and Iron.">
+      <created>1649619824853</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1649619824853</updated>
+    </task>
+    <task id="LOCAL-00002" summary="3d commit. New classes was added.">
+      <created>1649739176963</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1649739176963</updated>
+    </task>
+    <task id="LOCAL-00003" summary="4th commit. Add comparator.">
+      <created>1649826027064</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1649826027064</updated>
+    </task>
+    <task id="LOCAL-00004" summary="7th commit. Update after remarks.">
+      <created>1650093776811</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1650093776811</updated>
+    </task>
+    <task id="LOCAL-00005" summary="8th commit. Update after remarks.">
+      <created>1650473931679</created>
+      <option name="number" value="00005" />
+      <option name="presentableId" value="LOCAL-00005" />
+      <option name="project" value="LOCAL" />
+      <updated>1650473931679</updated>
+    </task>
+    <task id="LOCAL-00006" summary="Complete DataHandling homework">
+      <created>1651479066241</created>
+      <option name="number" value="00006" />
+      <option name="presentableId" value="LOCAL-00006" />
+      <option name="project" value="LOCAL" />
+      <updated>1651479066241</updated>
+    </task>
+    <option name="localTasksCounter" value="7" />
+    <servers />
+  </component>
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State />
+          </value>
+        </entry>
+      </map>
+    </option>
+  </component>
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="1st commit. Add all 3 interfaces and 3 classes: SomeAppliance, SomeWiredAppliance and Iron." />
+    <MESSAGE value="3d commit. New classes was added." />
+    <MESSAGE value="4th commit. Add comparator." />
+    <MESSAGE value="7th commit. Update after remarks." />
+    <MESSAGE value="8th commit. Update after remarks." />
+    <MESSAGE value="Complete DataHandling homework" />
+    <option name="LAST_COMMIT_MESSAGE" value="Complete DataHandling homework" />
+  </component>
+  <component name="XDebuggerManager">
+    <watches-manager>
+      <configuration name="Application">
+        <watch expression="roomWithAppliance[8]" language="JAVA" />
+        <watch expression="myRoom.calculateTotalPowerConsumption()" language="JAVA" />
+      </configuration>
+    </watches-manager>
+  </component>
+</project>
