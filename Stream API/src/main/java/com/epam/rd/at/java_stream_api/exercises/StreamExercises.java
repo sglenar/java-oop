@@ -2,20 +2,31 @@ package com.epam.rd.at.java_stream_api.exercises;
 
 import java.time.LocalDate;
 import java.time.Month;
-import java.util.List;
-import java.util.Map;
+import java.time.Period;
+import java.time.temporal.ChronoUnit;
+import java.util.*;
 import java.util.function.Predicate;
+import java.util.stream.Collectors;
+import java.util.stream.IntStream;
+
+import static java.util.concurrent.TimeUnit.DAYS;
 
 public class StreamExercises {
 
     // task 1
     public static List<Integer> generateNumbers(int x) {
-        throw new UnsupportedOperationException("Not yet implemented");
+        List<Integer> result = IntStream.rangeClosed(1, x).boxed().collect(Collectors.toList());
+        return result;
     }
 
     // task 2
     public static LocalDate findMostDistantDate(LocalDate anchorDate, LocalDate... datesToCompare) {
-        throw new UnsupportedOperationException("Not yet implemented");
+        List<LocalDate> resultsList = new ArrayList<>();
+        return Arrays.stream(datesToCompare).max(LocalDate::compareTo).get();
+    }
+
+    public static long testy (LocalDate dateAnch, LocalDate date) {
+        return Math.abs(ChronoUnit.DAYS.between(dateAnch, date));
     }
 
     // task 3
