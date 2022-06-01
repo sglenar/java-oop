@@ -32,6 +32,7 @@ public class StreamExercises {
 
     // task 4
     public static long countStringsWithUniqueCharacters(List<String> list) {
+        System.out.println(" qq");
         throw new UnsupportedOperationException("Not yet implemented");
     }
 
