@@ -11,7 +11,10 @@ import java.util.stream.Collectors;
 import java.util.stream.IntStream;
 import java.util.stream.Stream;
 
+import static java.util.Map.Entry.comparingByValue;
 import static java.util.concurrent.TimeUnit.DAYS;
+import static java.util.stream.Collectors.counting;
+import static java.util.stream.Collectors.groupingBy;
 
 public class StreamExercises {
 
@@ -28,13 +31,25 @@ public class StreamExercises {
 
     // task 3
     public static <T> List<T> getOddElements(List<T> list) {
-        return IntStream.range(0,list.size()).filter(x -> x % 2 != 0).mapToObj(x -> list.get(x)).collect(Collectors.toList());
+        return IntStream.range(0,list.size()).filter(index -> index % 2 != 0).mapToObj(index -> list.get(index)).collect(Collectors.toList());
     }
 
     // task 4
     public static long countStringsWithUniqueCharacters(List<String> list) {
-        list.stream().filter(x -> x.).distinct();
-        throw new UnsupportedOperationException("Not yet implemented");
+        return list.stream().filter(string -> {
+            if (string.equals("") ) {
+                return false;
+            }
+            char[] characters = string.toCharArray();
+            for (int i = 0; i < string.length(); i++) {
+                for ( int j = i+1; j < string.length(); j++ ) {
+                    if (characters[i] == characters[j]) {
+                        return false;
+                    }
+                }
+            }
+            return true;
+        }).count();
     }
 
     // task 5
@@ -45,7 +60,7 @@ public class StreamExercises {
 
     // task 6
     public static boolean checkNoNegativeValues(List<Integer> list) {
-        return list.stream().allMatch(s -> s >= 0);
+        return list.stream().allMatch(elem -> elem >= 0);
     }
 
     // task 7
@@ -68,19 +83,26 @@ public class StreamExercises {
     // task 8
     public static <T> int indexOfByPredicate(List<T> list, Predicate<T> predicate) {
        return IntStream.range(0,list.size())
-                .mapToObj(x -> list.get(x))
-                .filter(predicate)
+                .filter(index -> predicate.test(list.get(index)))
                 .findFirst().orElse(-1);
     }
 
     // task 9
     public static Map<Month, Integer> generateMonthAndLengths() {
+        //return IntStream.range(0,12).boxed().collect(groupingBy(x -> Month.of((Integer) x), Month.of(x).toString().length())).entrySet().
         throw new UnsupportedOperationException("Not yet implemented");
     }
 
     // task 10
     public static char findMostFrequentChar(String string) {
-        throw new UnsupportedOperationException("Not yet implemented");
+        return string.chars()
+                .mapToObj(symbol -> (char) symbol)
+                .collect(groupingBy(character -> character, counting()))
+                .entrySet().stream()
+                .filter(mapElement -> mapElement.getKey() !=' ')
+                .max(comparingByValue())
+                .get()
+                .getKey();
     }
 
     // task 11
