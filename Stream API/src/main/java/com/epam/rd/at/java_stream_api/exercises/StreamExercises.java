@@ -6,6 +6,7 @@ import java.time.Period;
 import java.time.temporal.ChronoUnit;
 import java.util.*;
 import java.util.function.Predicate;
+import java.util.regex.Pattern;
 import java.util.stream.Collectors;
 import java.util.stream.IntStream;
 import java.util.stream.Stream;
@@ -32,7 +33,8 @@ public class StreamExercises {
 
     // task 4
     public static long countStringsWithUniqueCharacters(List<String> list) {
-        return list.stream().map(x -> x.toCharArray()).distinct().count();
+        list.stream().filter(x -> x.).distinct();
+        throw new UnsupportedOperationException("Not yet implemented");
     }
 
     // task 5
@@ -65,7 +67,10 @@ public class StreamExercises {
 
     // task 8
     public static <T> int indexOfByPredicate(List<T> list, Predicate<T> predicate) {
-        throw new UnsupportedOperationException("Not yet implemented");
+       return IntStream.range(0,list.size())
+                .mapToObj(x -> list.get(x))
+                .filter(predicate)
+                .findFirst().orElse(-1);
     }
 
     // task 9
